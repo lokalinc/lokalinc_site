@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LokaLinc</title>
+  <meta name="description" content="LokaLinc helps expats in Germany connect for housing, travel support, and community discussions." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2.2rem;
+    }
+    .tagline {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 24px;
+    }
+    .notice {
+      margin-top: 24px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #eef4ff;
+      border: 1px solid #c7d7fe;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 18px;
+      background: #1d4ed8;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    .btn-secondary {
+      background: #111827;
+    }
+    .links {
+      margin-top: 28px;
+    }
+    .links a {
+      margin-right: 16px;
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 36px;
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>LokaLinc</h1>
+      <p class="tagline">
+        A community platform for expats in Germany — housing, travel support, and local discussions in one place.
+      </p>
+
+      <div id="home-content">
+        <p>
+          LokaLinc helps people connect for temporary housing, travel assistance,
+          and community conversations around jobs, visas, healthcare, and everyday life in Germany.
+        </p>
+
+        <a class="btn" href="mailto:support@lokalinc.de">Contact Support</a>
+
+        <div class="links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/support.html">Support</a>
+        </div>
+      </div>
+
+      <div id="app-link-content" class="notice" style="display:none;">
+        <h2 style="margin-top:0;">Open in the LokaLinc app</h2>
+        <p id="route-message">
+          This content is available in the LokaLinc mobile app. Please open the app.
+        </p>
+        <a class="btn btn-secondary" href="/">Back to home</a>
+      </div>
+
+      <footer>
+        © 2026 LokaLinc
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Restore redirected route from 404.html
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const redirectedPath = params.get("p");
+      const route = redirectedPath || window.location.pathname;
+
+      const homeContent = document.getElementById("home-content");
+      const appLinkContent = document.getElementById("app-link-content");
+      const routeMessage = document.getElementById("route-message");
+
+      const isAppRoute =
+        route.startsWith("/sublet/") ||
+        route.startsWith("/reset-password");
+
+      if (isAppRoute) {
+        homeContent.style.display = "none";
+        appLinkContent.style.display = "block";
+
+        if (route.startsWith("/reset-password")) {
+          routeMessage.textContent =
+            "This password reset link belongs to the LokaLinc mobile app. Please open the app to continue.";
+        } else if (route.startsWith("/sublet/")) {
+          routeMessage.textContent =
+            "This sublet listing is available in the LokaLinc mobile app. Please open the app to view it.";
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
