@@ -1,136 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LokaLinc</title>
-  <meta name="description" content="LokaLinc helps expats in Germany connect for housing, travel support, and community discussions." />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #1f2937;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 48px 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-    h1 {
-      margin-top: 0;
-      font-size: 2.2rem;
-    }
-    .tagline {
-      font-size: 1.1rem;
-      color: #4b5563;
-      margin-bottom: 24px;
-    }
-    .notice {
-      margin-top: 24px;
-      padding: 16px;
-      border-radius: 12px;
-      background: #eef4ff;
-      border: 1px solid #c7d7fe;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 18px;
-      background: #1d4ed8;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-    .btn-secondary {
-      background: #111827;
-    }
-    .links {
-      margin-top: 28px;
-    }
-    .links a {
-      margin-right: 16px;
-      color: #1d4ed8;
-      text-decoration: none;
-    }
-    footer {
-      margin-top: 36px;
-      font-size: 0.95rem;
-      color: #6b7280;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LokaLinc — Community for Expats in Germany</title>
+
+<meta name="description" content="LokaLinc connects expats in Germany for temporary housing, travel support, and community discussions.">
+
+<style>
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+background:#f8fafc;
+color:#1f2937;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#10b981;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#374151;
+font-weight:500;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#4b5563;
+max-width:700px;
+margin:auto;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+margin:6px;
+}
+
+.primary{
+background:#10b981;
+color:white;
+}
+
+.secondary{
+border:2px solid #10b981;
+color:#10b981;
+}
+
+.section{
+margin-top:80px;
+}
+
+.section h2{
+text-align:center;
+font-size:30px;
+margin-bottom:40px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.card h3{
+margin-top:0;
+color:#10b981;
+}
+
+.download{
+text-align:center;
+padding:60px 20px;
+background:white;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+footer{
+margin-top:60px;
+text-align:center;
+font-size:14px;
+color:#6b7280;
+}
+
+.notice{
+background:#ecfdf5;
+border:1px solid #10b981;
+padding:20px;
+border-radius:12px;
+margin-top:40px;
+text-align:center;
+}
+
+</style>
 </head>
+
+
 <body>
-  <div class="container">
-    <div class="card">
-      <h1>LokaLinc</h1>
-      <p class="tagline">
-        A community platform for expats in Germany — housing, travel support, and local discussions in one place.
-      </p>
 
-      <div id="home-content">
-        <p>
-          LokaLinc helps people connect for temporary housing, travel assistance,
-          and community conversations around jobs, visas, healthcare, and everyday life in Germany.
-        </p>
 
-        <a class="btn" href="mailto:support@lokalinc.de">Contact Support</a>
+<div class="container">
 
-        <div class="links">
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/support.html">Support</a>
-        </div>
-      </div>
+<header>
 
-      <div id="app-link-content" class="notice" style="display:none;">
-        <h2 style="margin-top:0;">Open in the LokaLinc app</h2>
-        <p id="route-message">
-          This content is available in the LokaLinc mobile app. Please open the app.
-        </p>
-        <a class="btn btn-secondary" href="/">Back to home</a>
-      </div>
+<div class="logo">LokaLinc</div>
 
-      <footer>
-        © 2026 LokaLinc
-      </footer>
-    </div>
-  </div>
+<nav>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a>
+</nav>
 
-  <script>
-    // Restore redirected route from 404.html
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const redirectedPath = params.get("p");
-      const route = redirectedPath || window.location.pathname;
+</header>
 
-      const homeContent = document.getElementById("home-content");
-      const appLinkContent = document.getElementById("app-link-content");
-      const routeMessage = document.getElementById("route-message");
 
-      const isAppRoute =
-        route.startsWith("/sublet/") ||
-        route.startsWith("/reset-password");
+<div id="home-content">
 
-      if (isAppRoute) {
-        homeContent.style.display = "none";
-        appLinkContent.style.display = "block";
+<section class="hero">
 
-        if (route.startsWith("/reset-password")) {
-          routeMessage.textContent =
-            "This password reset link belongs to the LokaLinc mobile app. Please open the app to continue.";
-        } else if (route.startsWith("/sublet/")) {
-          routeMessage.textContent =
-            "This sublet listing is available in the LokaLinc mobile app. Please open the app to view it.";
-        }
-      }
-    })();
-  </script>
+<h1>Community for Expats in Germany</h1>
+
+<p>
+LokaLinc helps people connect for temporary housing, travel support,
+and trusted community discussions — built especially for expats
+living in Germany.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#">
+Coming Soon on App Store
+</a>
+
+<a class="btn secondary" href="#">
+Coming Soon on Play Store
+</a>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<h2>What you can do with LokaLinc</h2>
+
+<div class="features">
+
+<div class="card">
+
+<h3>Temporary Housing</h3>
+
+<p>
+Find or offer short-term sublets when relocating, travelling,
+or waiting for long-term housing in Germany.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Travel Support</h3>
+
+<p>
+Connect with trusted travelers who can carry small items
+or documents between cities or countries.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Community Discussions</h3>
+
+<p>
+Ask questions and share experiences about jobs, visas,
+healthcare, accommodation, and daily life in Germany.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Built for Expats</h3>
+
+<p>
+LokaLinc focuses on real challenges expats face —
+helping people connect and support each other.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="download">
+
+<h2>Download LokaLinc</h2>
+
+<p>
+The LokaLinc mobile app is launching soon.
+</p>
+
+<p>
+It will be available on both the Apple App Store and Google Play Store.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#">
+App Store (Coming Soon)
+</a>
+
+<a class="btn secondary" href="#">
+Play Store (Coming Soon)
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+</div>
+
+
+
+<div id="app-link-content" style="display:none">
+
+<div class="notice">
+
+<h2>Open in the LokaLinc App</h2>
+
+<p id="route-message">
+This content is available inside the LokaLinc mobile app.
+Please open the app to continue.
+</p>
+
+<a class="btn primary" href="/">
+Back to Home
+</a>
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+© 2026 LokaLinc • Connecting communities across Germany
+
+</footer>
+
+
+</div>
+
+
+
+<script>
+
+(function(){
+
+const params = new URLSearchParams(window.location.search);
+const redirectedPath = params.get("p");
+const route = redirectedPath || window.location.pathname;
+
+const home = document.getElementById("home-content");
+const app = document.getElementById("app-link-content");
+const message = document.getElementById("route-message");
+
+const isAppRoute =
+route.startsWith("/sublet/") ||
+route.startsWith("/reset-password");
+
+if(isAppRoute){
+
+home.style.display="none";
+app.style.display="block";
+
+if(route.startsWith("/reset-password")){
+message.textContent =
+"This password reset link belongs to the LokaLinc mobile app. Please open the app to continue.";
+}
+
+if(route.startsWith("/sublet/")){
+message.textContent =
+"This sublet listing is available in the LokaLinc mobile app. Please open the app to view it.";
+}
+
+}
+
+})();
+
+</script>
+
+
 </body>
 </html>
