@@ -10,7 +10,16 @@
   var path = window.location.pathname;
   var search = window.location.search;
 
-  /* Only redirect app deep links */
+  /* pages that belong to the website */
+  if (
+    path.startsWith("/support") ||
+    path.startsWith("/privacy") ||
+    path.startsWith("/imprint")
+  ) {
+    return; // do nothing
+  }
+
+  /* only redirect app routes */
   if (
     path.startsWith("/sublet/") ||
     path.startsWith("/reset-password")
