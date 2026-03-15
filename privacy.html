@@ -16,107 +16,126 @@ color:#1f2937;
 }
 
 .container{
-max-width:900px;
+max-width:1100px;
 margin:auto;
 padding:40px 20px;
 }
 
 header{
 display:flex;
-justify-content:space-between;
 align-items:center;
-margin-bottom:40px;
+gap:12px;
+margin-bottom:60px;
+}
+
+.brand-link{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:inherit;
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
+height:42px;
+}
+
+.brand{
+font-size:30px;
+font-weight:800;
 color:#10b981;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#374151;
-font-weight:500;
-}
-
-.card{
+.page-card{
 background:white;
 padding:36px;
 border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-line-height:1.6;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+line-height:1.7;
 }
 
-h1{
+.page-card h1{
 margin-top:0;
+margin-bottom:10px;
 }
 
-h2{
-margin-top:32px;
+.page-card h2{
+margin-top:28px;
+margin-bottom:10px;
 color:#10b981;
-font-size:20px;
+font-size:22px;
 }
 
-ul{
+.page-card ul{
 padding-left:20px;
 }
 
-a{
+.page-card a{
 color:#10b981;
 text-decoration:none;
 }
 
+.back-wrap{
+margin-top:32px;
+}
+
+.back-btn{
+display:inline-block;
+padding:12px 18px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+background:#10b981;
+color:white;
+}
+
 footer{
-margin-top:40px;
-text-align:center;
+margin-top:100px;
+padding-top:30px;
+border-top:1px solid #e5e7eb;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
 font-size:14px;
+color:#6b7280;
+}
+
+footer a{
+margin-left:20px;
+text-decoration:none;
 color:#6b7280;
 }
 
 </style>
 </head>
 
-
 <body>
 
 <div class="container">
 
 <header>
-
-<div class="logo">LokaLinc</div>
-
-<nav>
-<a href="/">Privacy</a>
-<a href="/support.html">Support</a>
-</nav>
-
+<a href="/" class="brand-link">
+  <img src="Logo_LokaLinc_Transparent.png" class="logo">
+  <div class="brand">LokaLinc</div>
+</a>
 </header>
 
-
-<div class="card">
+<div class="page-card">
 
 <h1>Privacy Policy</h1>
 
 <p><strong>Last updated: March 2026</strong></p>
 
 <h2>1. Controller</h2>
-
 <p>
-LokaLinc (“we”, “us”) is the controller within the meaning of the EU
-General Data Protection Regulation (GDPR).
+LokaLinc (“we”, “us”) is the controller within the meaning of the EU General Data Protection Regulation (GDPR).
 </p>
-
 <p>
-Contact:
-<a href="mailto:privacy@lokalinc.de">privacy@lokalinc.de</a>
+Contact: <a href="mailto:privacy@lokalinc.de">privacy@lokalinc.de</a>
 </p>
 
 <h2>2. Categories of Personal Data</h2>
-
 <p>We process the following categories of personal data:</p>
-
 <ul>
 <li>Account data (name, username, email address)</li>
 <li>Profile information (city)</li>
@@ -126,9 +145,7 @@ Contact:
 </ul>
 
 <h2>3. Purposes and Legal Basis (Art. 6 GDPR)</h2>
-
 <p>Processing is carried out on the following legal bases:</p>
-
 <ul>
 <li>Art. 6(1)(b) GDPR – performance of contract (provision of the platform)</li>
 <li>Art. 6(1)(f) GDPR – legitimate interests (platform security, fraud prevention, service improvement, enforcement of terms)</li>
@@ -137,35 +154,22 @@ Contact:
 </ul>
 
 <h2>4. Hosting and Infrastructure</h2>
-
 <p>
-The platform is hosted by external service providers. Data is stored on
-secure infrastructure within the European Union or in jurisdictions
-offering adequate data protection safeguards pursuant to Art. 44 et seq.
-GDPR.
+The platform is hosted by external service providers. Data is stored on secure infrastructure within the European Union or in jurisdictions offering adequate data protection safeguards pursuant to Art. 44 et seq. GDPR.
 </p>
 
 <h2>5. Communication Content</h2>
-
 <p>
-Messages, posts and other user-generated content are stored on service
-providers. Access by administrators is restricted and may occur only
-where necessary for security, abuse prevention, technical maintenance,
-or legal compliance.
+Messages, posts and other user-generated content are stored on service providers. Access by administrators is restricted and may occur only where necessary for security, abuse prevention, technical maintenance, or legal compliance.
 </p>
 
 <h2>6. Data Retention</h2>
-
 <p>
-Personal data is retained for the duration of the user relationship.
-Upon verified deletion request, account data is erased within
-30 days unless statutory retention obligations require otherwise.
+Personal data is retained for the duration of the user relationship. Upon verified deletion request, account data is erased within 30 days unless statutory retention obligations require otherwise.
 </p>
 
 <h2>7. Data Sharing</h2>
-
 <p>We do not sell personal data. Data may be disclosed:</p>
-
 <ul>
 <li>To service providers under data processing agreements (Art. 28 GDPR)</li>
 <li>To competent authorities where legally required</li>
@@ -173,35 +177,33 @@ Upon verified deletion request, account data is erased within
 </ul>
 
 <h2>8. Security Measures</h2>
-
 <p>
-We implement appropriate technical and organizational measures pursuant
-to Art. 32 GDPR, including encrypted data transmission (HTTPS),
-hashed passwords, and access controls.
+We implement appropriate technical and organizational measures pursuant to Art. 32 GDPR, including encrypted data transmission (HTTPS), hashed passwords, and access controls.
 </p>
 
 <h2>9. Your Rights</h2>
-
 <p>
-You have rights under Articles 15–21 GDPR, including access,
-rectification, erasure, restriction, objection, and data portability.
+You have rights under Articles 15–21 GDPR, including access, rectification, erasure, restriction, objection, and data portability.
 </p>
 
 <p>
 Requests may be directed to:
 <a href="mailto:privacy@lokalinc.de">privacy@lokalinc.de</a>
-
-<p><a href="/">← Back to home</a></p>
 </p>
 
+<div class="back-wrap">
+  <a href="/" class="back-btn">← Back to Home</a>
+</div>
 
 </div>
 
-
 <footer>
-
-© 2026 LokaLinc
-
+<div>© 2026 LokaLinc</div>
+<div>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a>
+<a href="/imprint.html">Imprint</a>
+</div>
 </footer>
 
 </div>
