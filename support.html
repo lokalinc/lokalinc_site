@@ -13,12 +13,21 @@ margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 background:#f8fafc;
 color:#1f2937;
+
+display:flex;
+flex-direction:column;
+min-height:100vh;
 }
 
 .container{
 max-width:1100px;
 margin:auto;
 padding:40px 20px;
+width:100%;
+}
+
+.page-main{
+flex:1;
 }
 
 header{
@@ -100,7 +109,7 @@ color:#6b7280;
 
 <body>
 
-<div class="container">
+<div class="container page-main">
 
 <header>
 <a href="/" class="brand-link">
@@ -128,6 +137,10 @@ For support, questions, or account-related requests, please contact us at:
 </div>
 
 </div>
+
+</div>
+
+<div class="container">
 
 <footer>
 <div>© 2026 LokaLinc</div>
