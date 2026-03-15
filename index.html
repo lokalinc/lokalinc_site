@@ -25,27 +25,23 @@ padding:40px 20px;
 
 header{
 display:flex;
-justify-content:space-between;
 align-items:center;
-margin-bottom:40px;
+gap:12px;
+margin-bottom:60px;
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
-color:#10b981;
+height:40px;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#374151;
-font-weight:500;
+.brand{
+font-size:22px;
+font-weight:700;
 }
 
 .hero{
 text-align:center;
-padding:60px 20px;
+padding:40px 20px 80px 20px;
 }
 
 .hero h1{
@@ -60,27 +56,23 @@ max-width:700px;
 margin:auto;
 }
 
-.buttons{
-margin-top:30px;
+.badges{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.btn{
-display:inline-block;
-padding:14px 22px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-margin:6px;
+.badges img{
+height:55px;
 }
 
-.primary{
-background:#10b981;
-color:white;
-}
-
-.secondary{
-border:2px solid #10b981;
+.coming{
+margin-top:10px;
+font-size:14px;
 color:#10b981;
+font-weight:600;
 }
 
 .section{
@@ -111,49 +103,56 @@ margin-top:0;
 color:#10b981;
 }
 
-.download{
+.launch{
 text-align:center;
-padding:60px 20px;
+margin-top:80px;
 background:white;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-footer{
-margin-top:60px;
-text-align:center;
-font-size:14px;
-color:#6b7280;
+padding:40px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
 .notice{
 background:#ecfdf5;
 border:1px solid #10b981;
-padding:20px;
+padding:30px;
 border-radius:12px;
-margin-top:40px;
+margin-top:60px;
 text-align:center;
+}
+
+footer{
+margin-top:100px;
+padding-top:30px;
+border-top:1px solid #e5e7eb;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:14px;
+color:#6b7280;
+}
+
+footer a{
+margin-left:20px;
+text-decoration:none;
+color:#6b7280;
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <div class="container">
 
 <header>
 
-<div class="logo">LokaLinc</div>
+<img src="logo.png" class="logo">
 
-<nav>
-<a href="/privacy.html">Privacy</a>
-<a href="/support.html">Support</a>
-</nav>
+<div class="brand">LokaLinc</div>
 
 </header>
+
 
 
 <div id="home-content">
@@ -168,15 +167,17 @@ and trusted community discussions — built especially for expats
 living in Germany.
 </p>
 
-<div class="buttons">
+<div class="badges">
 
-<a class="btn primary" href="#">
-Coming Soon on App Store
-</a>
+<div>
+<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+<div class="coming">Coming Soon</div>
+</div>
 
-<a class="btn secondary" href="#">
-Coming Soon on Play Store
-</a>
+<div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+<div class="coming">Coming Soon</div>
+</div>
 
 </div>
 
@@ -195,8 +196,8 @@ Coming Soon on Play Store
 <h3>Temporary Housing</h3>
 
 <p>
-Find or offer short-term apartments (sublets) when relocating, travelling,
-or waiting for long-term housing in Germany.
+Find or offer short-term apartments (sublets) when relocating,
+travelling, or waiting for long-term housing in Germany.
 </p>
 
 </div>
@@ -207,8 +208,8 @@ or waiting for long-term housing in Germany.
 <h3>Travel Support</h3>
 
 <p>
-Connect with trusted travelers who can carry small items (medicines)
-or documents between countries.
+Connect with trusted travelers who can carry small items
+(medicines) or documents between countries.
 </p>
 
 </div>
@@ -243,37 +244,15 @@ helping people connect and support each other.
 
 
 
-<section class="section">
+<div class="launch">
 
-<div class="download">
-
-<h2>Download LokaLinc</h2>
+<h2>LokaLinc is launching soon</h2>
 
 <p>
-The LokaLinc mobile app is launching soon.
+Join the community connecting expats across Germany.
 </p>
 
-<p>
-It will be available on both the Apple App Store and Google Play Store.
-</p>
-
-<div class="buttons">
-
-<a class="btn primary" href="#">
-App Store (Coming Soon)
-</a>
-
-<a class="btn secondary" href="#">
-Play Store (Coming Soon)
-</a>
-
 </div>
-
-</div>
-
-</section>
-
-
 
 </div>
 
@@ -290,10 +269,6 @@ This content is available inside the LokaLinc mobile app.
 Please open the app to continue.
 </p>
 
-<a class="btn primary" href="/">
-Back to Home
-</a>
-
 </div>
 
 </div>
@@ -302,7 +277,15 @@ Back to Home
 
 <footer>
 
-© 2026 LokaLinc • Connecting communities across Germany
+<div>
+© 2026 LokaLinc
+</div>
+
+<div>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a>
+<a href="/impressum.html">Impressum</a>
+</div>
 
 </footer>
 
