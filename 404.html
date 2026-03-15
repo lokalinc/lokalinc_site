@@ -2,11 +2,37 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Page not found</title>
+<title>Redirecting...</title>
+
 <script>
-  window.location.replace("/");
+(function () {
+
+  var path = window.location.pathname.toLowerCase();
+
+  /* allow real pages */
+  if (
+    path === "/privacy.html" ||
+    path === "/support.html" ||
+    path === "/imprint.html"
+  ) {
+    return;
+  }
+
+  /* handle app links */
+  if (
+    path.startsWith("/sublet/") ||
+    path.startsWith("/community/") ||
+    path.startsWith("/reset-password")
+  ) {
+    window.location.replace("/");
+    return;
+  }
+
+})();
 </script>
+
 </head>
+
 <body>
 </body>
 </html>
