@@ -7,9 +7,25 @@
 <script>
 (function () {
 
-  var path = window.location.pathname;
+  var path = window.location.pathname.toLowerCase();
 
-  /* only handle app deep links */
+  /* Fix GitHub Pages folder routing */
+  if (path === "/privacy/" || path === "/privacy") {
+    window.location.replace("/privacy/index.html");
+    return;
+  }
+
+  if (path === "/support/" || path === "/support") {
+    window.location.replace("/support/index.html");
+    return;
+  }
+
+  if (path === "/imprint/" || path === "/imprint") {
+    window.location.replace("/imprint/index.html");
+    return;
+  }
+
+  /* app links (temporary behaviour) */
   if (
     path.startsWith("/sublet/") ||
     path.startsWith("/community/") ||
@@ -19,10 +35,15 @@
     return;
   }
 
+  /* everything else */
+  window.location.replace("/");
+
 })();
 </script>
 
 </head>
 
-<body></body>
+<body>
+Redirecting...
+</body>
 </html>
