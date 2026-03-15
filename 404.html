@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Redirecting...</title>
 
 <script>
 (function () {
 
-  var path = window.location.pathname;
-  var search = window.location.search;
+  var path = window.location.pathname.toLowerCase();
 
-  /* pages that belong to the website */
+  /* allow real website pages */
   if (
-    path.startsWith("/support") ||
-    path.startsWith("/privacy") ||
-    path.startsWith("/imprint")
+    path === "/privacy" ||
+    path === "/privacy/" ||
+    path === "/support" ||
+    path === "/support/" ||
+    path === "/imprint" ||
+    path === "/imprint/"
   ) {
-    return; // do nothing
+    window.location.replace(path.replace(/\/$/, ""));
+    return;
   }
 
-  /* only redirect app routes */
-  if (
-    path.startsWith("/sublet/") ||
-    path.startsWith("/reset-password")
-  ) {
-    var target = "/?p=" + encodeURIComponent(path) + search;
-    window.location.replace(target);
-  }
+  /* everything else goes to homepage */
+  window.location.replace("/");
 
 })();
 </script>
