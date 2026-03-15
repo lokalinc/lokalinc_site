@@ -7,30 +7,22 @@
 <script>
 (function () {
 
-  var path = window.location.pathname.toLowerCase();
+  var path = window.location.pathname;
 
-  /* allow real website pages */
+  /* only handle app deep links */
   if (
-    path === "/privacy" ||
-    path === "/privacy/" ||
-    path === "/support" ||
-    path === "/support/" ||
-    path === "/imprint" ||
-    path === "/imprint/"
+    path.startsWith("/sublet/") ||
+    path.startsWith("/community/") ||
+    path.startsWith("/reset-password")
   ) {
-    window.location.replace(path.replace(/\/$/, ""));
+    window.location.replace("/");
     return;
   }
-
-  /* everything else goes to homepage */
-  window.location.replace("/");
 
 })();
 </script>
 
 </head>
 
-<body>
-Redirecting...
-</body>
+<body></body>
 </html>
