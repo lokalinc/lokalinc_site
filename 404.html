@@ -2,48 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Redirecting...</title>
-
+<title>Page not found</title>
 <script>
-(function () {
-
-  var path = window.location.pathname.toLowerCase();
-
-  /* Fix GitHub Pages folder routing */
-  if (path === "/privacy/" || path === "/privacy") {
-    window.location.replace("/privacy/index.html");
-    return;
-  }
-
-  if (path === "/support/" || path === "/support") {
-    window.location.replace("/support/index.html");
-    return;
-  }
-
-  if (path === "/imprint/" || path === "/imprint") {
-    window.location.replace("/imprint/index.html");
-    return;
-  }
-
-  /* app links (temporary behaviour) */
-  if (
-    path.startsWith("/sublet/") ||
-    path.startsWith("/community/") ||
-    path.startsWith("/reset-password")
-  ) {
-    window.location.replace("/");
-    return;
-  }
-
-  /* everything else */
   window.location.replace("/");
-
-})();
 </script>
-
 </head>
-
 <body>
-Redirecting...
 </body>
 </html>
