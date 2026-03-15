@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Redirecting...</title>
-  <script>
-    (function () {
-      var path = window.location.pathname + window.location.search + window.location.hash;
-      var target = "/?p=" + encodeURIComponent(window.location.pathname) + window.location.search;
-      window.location.replace(target);
-    })();
-  </script>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
+
+<script>
+(function () {
+
+  var path = window.location.pathname;
+  var search = window.location.search;
+
+  /* Only redirect app deep links */
+  if (
+    path.startsWith("/sublet/") ||
+    path.startsWith("/reset-password")
+  ) {
+    var target = "/?p=" + encodeURIComponent(path) + search;
+    window.location.replace(target);
+  }
+
+})();
+</script>
+
 </head>
+
 <body>
-  Redirecting...
+Redirecting...
 </body>
 </html>
