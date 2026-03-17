@@ -22,9 +22,9 @@ color:#1f2937;
 }
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
-padding:20px;
+padding:30px 20px;
 }
 
 /* ---------- Header ---------- */
@@ -32,178 +32,226 @@ padding:20px;
 header{
 display:flex;
 align-items:center;
-gap:10px;
-margin-bottom:30px;
+gap:12px;
+margin-bottom:40px;
+}
+
+.brand-link{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:inherit;
 }
 
 .logo{
-height:36px;
+height:40px;
 }
 
 .brand{
-font-size:22px;
+font-size:26px;
 font-weight:800;
 color:#10b981;
 }
 
-/* ---------- HERO ---------- */
+/* ---------- Hero ---------- */
 
 .hero{
+padding:70px 20px 90px 20px;
 text-align:center;
-padding:40px 20px;
-background:linear-gradient(135deg,#ecfdf5,#f8fafc);
-border-radius:16px;
-}
-
-.hero h1{
-font-size:30px;
-margin:10px 0;
+background:linear-gradient(135deg,#ecfdf5 0%, #f8fafc 100%);
+border-radius:20px;
 }
 
 .tagline{
 font-size:14px;
-color:#10b981;
 font-weight:600;
+color:#10b981;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:16px;
+font-size:18px;
 color:#4b5563;
-margin-top:10px;
+max-width:600px;
+margin:auto;
+line-height:1.6;
 }
 
 .badges{
-margin-top:20px;
+margin-top:30px;
 display:flex;
 justify-content:center;
-gap:15px;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .badges img{
-height:45px;
+height:50px;
 }
 
 .coming{
-font-size:12px;
+margin-top:6px;
+font-size:13px;
 color:#10b981;
+font-weight:600;
 }
 
-/* ---------- SECTION ---------- */
+/* ---------- Sections ---------- */
 
 .section{
-margin-top:70px;
+margin-top:100px;
 }
 
-/* ---------- PROBLEM CARDS ---------- */
+/* ---------- Problem ---------- */
 
-.problem-grid{
-display:grid;
-grid-template-columns:1fr;
-gap:15px;
+.problem-block{
+max-width:700px;
+margin:auto;
+text-align:center;
 }
 
-.problem-card{
+.problem-intro{
+color:#6b7280;
+margin-bottom:20px;
+}
+
+.problem-list{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.problem-list li{
+margin:10px 0;
+padding:14px;
 background:white;
-padding:18px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
 font-size:15px;
 }
 
 .problem-summary{
-text-align:center;
 margin-top:20px;
 color:#4b5563;
 }
 
 .problem-highlight{
-text-align:center;
 margin-top:10px;
 font-weight:700;
 }
 
-/* ---------- SOLUTION ---------- */
+/* ---------- Solution ---------- */
 
-.solution{
+.solution-block{
+max-width:700px;
+margin:auto;
+text-align:center;
 margin-top:20px;
 }
 
-.solution-box{
-background:white;
-padding:20px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-margin-bottom:15px;
+.solution-item{
+margin-bottom:20px;
 }
 
-.solution-box strong{
+.solution-item strong{
 color:#10b981;
+display:block;
+margin-bottom:5px;
 }
 
-/* ---------- BANNER ---------- */
+.solution-item p{
+margin:0;
+color:#374151;
+}
+
+/* ---------- Banner ---------- */
 
 .banner{
-margin-top:20px;
+margin-top:40px;
 text-align:center;
 }
 
 .banner img{
-width:100%;
-border-radius:14px;
+max-width:100%;
+border-radius:16px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* ---------- FEATURES ---------- */
+/* ---------- Features ---------- */
 
 .features{
-margin-top:30px;
+margin-top:60px;
 display:grid;
-grid-template-columns:1fr;
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
 }
 
 .card h3{
-margin:0;
+margin-top:0;
 color:#10b981;
 }
 
-/* ---------- WAITLIST ---------- */
+/* ---------- Waitlist ---------- */
 
 .waitlist{
-margin-top:60px;
+text-align:center;
+margin-top:100px;
 background:white;
-padding:25px;
+padding:40px;
 border-radius:14px;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
-text-align:center;
+}
+
+.waitlist p{
+color:#4b5563;
 }
 
 .gdpr{
+margin-top:4px;
 font-size:12px;
-margin-top:5px;
 color:#6b7280;
 }
 
-/* ---------- FOOTER ---------- */
+/* ---------- Footer ---------- */
 
 footer{
-margin-top:60px;
-font-size:13px;
+margin-top:100px;
+padding-top:30px;
+border-top:1px solid #e5e7eb;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:14px;
 color:#6b7280;
-text-align:center;
 }
 
 footer a{
-margin:0 8px;
+margin-left:20px;
 text-decoration:none;
 color:#6b7280;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
 }
 
 </style>
@@ -214,15 +262,18 @@ color:#6b7280;
 <div class="container">
 
 <header>
-<img src="Logo_LokaLinc_Transparent.png" class="logo">
-<div class="brand">LokaLinc</div>
+<a href="/" class="brand-link">
+  <img src="Logo_LokaLinc_Transparent.png" class="logo">
+  <div class="brand">LokaLinc</div>
+</a>
 </header>
+
+<div id="home-content">
 
 <!-- HERO -->
 
-<div class="hero">
+<section class="hero">
 
-<div class="brand">LokaLinc</div>
 <div class="tagline">Living and Moving Together</div>
 
 <h1>Community for expats in Germany</h1>
@@ -245,7 +296,7 @@ Find housing, travel support, and real help from people who understand your situ
 
 </div>
 
-</div>
+</section>
 
 <!-- PROBLEM -->
 
@@ -253,23 +304,29 @@ Find housing, travel support, and real help from people who understand your situ
 
 <h2 style="text-align:center;">Still doing it the hard way?</h2>
 
-<div class="problem-grid">
+<div class="problem-block">
 
-<div class="problem-card">Jumping between WhatsApp groups</div>
-<div class="problem-card">Waiting and hoping someone replies</div>
-<div class="problem-card">Searching everywhere for a place to stay</div>
-<div class="problem-card">Posting in multiple places to get responses</div>
-<div class="problem-card">Trying to find someone who can actually help</div>
+<p class="problem-intro">
+It usually looks something like this:
+</p>
 
-</div>
+<ul class="problem-list">
+<li>Jumping between WhatsApp groups</li>
+<li>Waiting and hoping someone replies</li>
+<li>Searching everywhere for a place to stay</li>
+<li>Posting in multiple places just to get a response</li>
+<li>Trying to find someone who can actually help</li>
+</ul>
 
 <p class="problem-summary">
-You eventually find a solution. But it takes time, effort, and sometimes luck.
+You eventually find a solution. But it takes time, effort, and sometimes a bit of luck.
 </p>
 
 <p class="problem-highlight">
 There should be a simpler way.
 </p>
+
+</div>
 
 </section>
 
@@ -277,23 +334,23 @@ There should be a simpler way.
 
 <section class="section">
 
-<h2 style="text-align:center;">That is why LokaLinc exists</h2>
+<h2 style="text-align:center;">That is exactly why LokaLinc exists</h2>
 
-<div class="solution">
+<div class="solution-block">
 
-<div class="solution-box">
-<strong>One place for everything</strong><br>
-No need to jump between platforms anymore
+<div class="solution-item">
+<strong>Everything in one place</strong>
+<p>No more jumping across platforms or scattered conversations</p>
 </div>
 
-<div class="solution-box">
-<strong>Housing + Travel + Community</strong><br>
-Everything connected in one simple experience
+<div class="solution-item">
+<strong>Housing, travel, and community</strong>
+<p>Find stays, connect with travellers, and ask questions in one simple space</p>
 </div>
 
-<div class="solution-box">
-<strong>Reach more people</strong><br>
-Your request reaches the right audience faster
+<div class="solution-item">
+<strong>Reach the right people faster</strong>
+<p>Your request reaches a larger and more relevant audience</p>
 </div>
 
 </div>
@@ -308,13 +365,13 @@ Your request reaches the right audience faster
 
 <section class="section">
 
-<h2 style="text-align:center;">What you can do</h2>
+<h2 style="text-align:center;">What you can do with LokaLinc</h2>
 
 <div class="features">
 
 <div class="card">
 <h3>Temporary Housing</h3>
-<p>Find or offer short stays when moving between cities</p>
+<p>Find or offer short term stays when moving between cities</p>
 </div>
 
 <div class="card">
@@ -323,13 +380,13 @@ Your request reaches the right audience faster
 </div>
 
 <div class="card">
-<h3>Community</h3>
-<p>Ask questions and get real help</p>
+<h3>Community Discussions</h3>
+<p>Ask questions and share experiences</p>
 </div>
 
 <div class="card">
 <h3>Built for Expats</h3>
-<p>Focused on real challenges</p>
+<p>Designed around real challenges people face</p>
 </div>
 
 </div>
@@ -342,30 +399,32 @@ Your request reaches the right audience faster
 
 <h2>Get early access</h2>
 
-<p>Be among the first to try LokaLinc</p>
+<p>Be among the first to try LokaLinc.</p>
 
 <p>
-Leave your details and we will let you know when the app is ready
+Leave your details and we will let you know as soon as the app is ready.
 </p>
 
 <p class="gdpr">
-You can request removal of your data at any time by contacting us
+You can request removal of your data at any time by contacting us.
 </p>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdR5SzuFea_y5iV_zatorZxH6Rm6RoHTKcKM335wVNL7zJxOQ/viewform?embedded=true"
-width="100%" height="850" frameborder="0">Loading…</iframe>
+width="100%" height="900" frameborder="0">Loading…</iframe>
 
 </section>
 
+</div>
+
 <footer>
 
-<p>© 2026 LokaLinc</p>
+<div>© 2026 LokaLinc</div>
 
-<p>
+<div>
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a>
 <a href="/imprint.html">Imprint</a>
-</p>
+</div>
 
 </footer>
 
