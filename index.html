@@ -22,9 +22,9 @@ color:#1f2937;
 }
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
-padding:30px 20px;
+padding:20px;
 }
 
 /* ---------- Header ---------- */
@@ -32,256 +32,178 @@ padding:30px 20px;
 header{
 display:flex;
 align-items:center;
-gap:12px;
-margin-bottom:40px;
-}
-
-.brand-link{
-display:flex;
-align-items:center;
-gap:12px;
-text-decoration:none;
-color:inherit;
+gap:10px;
+margin-bottom:30px;
 }
 
 .logo{
-height:40px;
+height:36px;
 }
 
 .brand{
-font-size:26px;
+font-size:22px;
 font-weight:800;
 color:#10b981;
 }
 
-/* ---------- Hero ---------- */
+/* ---------- HERO ---------- */
 
 .hero{
-padding:70px 20px 90px 20px;
 text-align:center;
-background:linear-gradient(135deg,#ecfdf5 0%, #f8fafc 100%);
-border-radius:20px;
+padding:40px 20px;
+background:linear-gradient(135deg,#ecfdf5,#f8fafc);
+border-radius:16px;
+}
+
+.hero h1{
+font-size:30px;
+margin:10px 0;
 }
 
 .tagline{
 font-size:14px;
-font-weight:600;
 color:#10b981;
-margin-bottom:10px;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:20px;
+font-weight:600;
 }
 
 .hero p{
-font-size:18px;
+font-size:16px;
 color:#4b5563;
-max-width:600px;
-margin:auto;
-line-height:1.6;
+margin-top:10px;
 }
 
-/* badges */
-
 .badges{
-margin-top:30px;
+margin-top:20px;
 display:flex;
 justify-content:center;
-gap:20px;
+gap:15px;
 flex-wrap:wrap;
 }
 
 .badges img{
-height:50px;
+height:45px;
 }
 
 .coming{
-margin-top:6px;
-font-size:13px;
+font-size:12px;
 color:#10b981;
-font-weight:600;
 }
 
-/* ---------- Sections ---------- */
+/* ---------- SECTION ---------- */
 
 .section{
-margin-top:100px;
+margin-top:70px;
 }
 
-/* ---------- Problem ---------- */
+/* ---------- PROBLEM CARDS ---------- */
 
-.problem{
-max-width:700px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-color:#374151;
+.problem-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
 }
 
-.problem h2{
-text-align:center;
-margin-bottom:30px;
-}
-
-.problem-line{
-margin:16px 0;
-opacity:0;
-transform:translateY(10px);
-animation:fadeUp 0.6s ease forwards;
-}
-
-.problem-line:nth-child(1){animation-delay:0.1s;}
-.problem-line:nth-child(2){animation-delay:0.2s;}
-.problem-line:nth-child(3){animation-delay:0.3s;}
-.problem-line:nth-child(4){animation-delay:0.4s;}
-.problem-line:nth-child(5){animation-delay:0.5s;}
-
-.problem-line.shift{
-margin-left:40px;
-color:#6b7280;
+.problem-card{
+background:white;
+padding:18px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
+font-size:15px;
 }
 
 .problem-summary{
-margin-top:25px;
 text-align:center;
+margin-top:20px;
 color:#4b5563;
 }
 
 .problem-highlight{
-margin-top:10px;
 text-align:center;
+margin-top:10px;
 font-weight:700;
 }
 
-/* ---------- Solution ---------- */
+/* ---------- SOLUTION ---------- */
 
-.solution-wrap{
-display:flex;
-align-items:center;
-gap:50px;
-flex-wrap:wrap;
+.solution{
+margin-top:20px;
 }
 
-.solution-text{
-flex:1;
-min-width:300px;
+.solution-box{
+background:white;
+padding:20px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+margin-bottom:15px;
 }
 
-.solution-text h2{
-margin-bottom:20px;
+.solution-box strong{
+color:#10b981;
 }
 
-.solution-text p{
-font-size:18px;
-line-height:1.8;
-color:#374151;
-}
+/* ---------- BANNER ---------- */
 
-.solution-image{
-flex:1;
-min-width:280px;
+.banner{
+margin-top:20px;
 text-align:center;
 }
 
-.solution-image img{
-max-width:100%;
-border-radius:16px;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
+.banner img{
+width:100%;
+border-radius:14px;
 }
 
-/* ---------- Features ---------- */
+/* ---------- FEATURES ---------- */
 
 .features{
-margin-top:60px;
+margin-top:30px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:1fr;
+gap:15px;
 }
 
 .card{
 background:white;
-padding:28px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
-transition:transform 0.2s ease;
-}
-
-.card:hover{
-transform:translateY(-5px);
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
 }
 
 .card h3{
-margin-top:0;
+margin:0;
 color:#10b981;
 }
 
-/* ---------- Waitlist ---------- */
+/* ---------- WAITLIST ---------- */
 
 .waitlist{
-text-align:center;
-margin-top:100px;
+margin-top:60px;
 background:white;
-padding:40px;
+padding:25px;
 border-radius:14px;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-.waitlist p{
-color:#4b5563;
+text-align:center;
 }
 
 .gdpr{
-margin-top:4px;
 font-size:12px;
+margin-top:5px;
 color:#6b7280;
 }
 
-/* ---------- Footer ---------- */
+/* ---------- FOOTER ---------- */
 
 footer{
-margin-top:100px;
-padding-top:30px;
-border-top:1px solid #e5e7eb;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-font-size:14px;
+margin-top:60px;
+font-size:13px;
 color:#6b7280;
+text-align:center;
 }
 
 footer a{
-margin-left:20px;
+margin:0 8px;
 text-decoration:none;
 color:#6b7280;
-}
-
-/* ---------- Animation ---------- */
-
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* ---------- Mobile ---------- */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:32px;
-}
-
-.problem-line.shift{
-margin-left:0;
-}
-
-.solution-wrap{
-flex-direction:column;
-}
-
 }
 
 </style>
@@ -292,18 +214,15 @@ flex-direction:column;
 <div class="container">
 
 <header>
-<a href="/" class="brand-link">
-  <img src="Logo_LokaLinc_Transparent.png" class="logo">
-  <div class="brand">LokaLinc</div>
-</a>
+<img src="Logo_LokaLinc_Transparent.png" class="logo">
+<div class="brand">LokaLinc</div>
 </header>
-
-<div id="home-content">
 
 <!-- HERO -->
 
-<section class="hero">
+<div class="hero">
 
+<div class="brand">LokaLinc</div>
 <div class="tagline">Living and Moving Together</div>
 
 <h1>Community for expats in Germany</h1>
@@ -326,27 +245,26 @@ Find housing, travel support, and real help from people who understand your situ
 
 </div>
 
-</section>
-
+</div>
 
 <!-- PROBLEM -->
 
-<section class="section problem">
+<section class="section">
 
-<h2>Still doing it the hard way?</h2>
+<h2 style="text-align:center;">Still doing it the hard way?</h2>
 
-<div class="problem-line">Jumping between WhatsApp groups…</div>
-<div class="problem-line shift">Hoping someone replies in time…</div>
-<div class="problem-line">Searching everywhere for a place to stay…</div>
-<div class="problem-line shift">Posting in multiple places just to get a response…</div>
-<div class="problem-line">Trying to find someone who can actually help…</div>
+<div class="problem-grid">
+
+<div class="problem-card">Jumping between WhatsApp groups</div>
+<div class="problem-card">Waiting and hoping someone replies</div>
+<div class="problem-card">Searching everywhere for a place to stay</div>
+<div class="problem-card">Posting in multiple places to get responses</div>
+<div class="problem-card">Trying to find someone who can actually help</div>
+
+</div>
 
 <p class="problem-summary">
-You eventually find a solution. But it takes time, effort, and sometimes a bit of luck.
-</p>
-
-<p class="problem-summary">
-It works. But it should not be this hard.
+You eventually find a solution. But it takes time, effort, and sometimes luck.
 </p>
 
 <p class="problem-highlight">
@@ -355,55 +273,48 @@ There should be a simpler way.
 
 </section>
 
-
 <!-- SOLUTION -->
 
 <section class="section">
 
-<div class="solution-wrap">
+<h2 style="text-align:center;">That is why LokaLinc exists</h2>
 
-<div class="solution-text">
+<div class="solution">
 
-<h2>That is exactly why LokaLinc exists</h2>
+<div class="solution-box">
+<strong>One place for everything</strong><br>
+No need to jump between platforms anymore
+</div>
 
-<p>
-LokaLinc brings everything into one place.
-</p>
+<div class="solution-box">
+<strong>Housing + Travel + Community</strong><br>
+Everything connected in one simple experience
+</div>
 
-<p>
-Find temporary housing when you need it.  
-Connect with people for travel support.  
-Ask questions and get help from a community that understands your journey.
-</p>
-
-<p>
-No searching across multiple platforms.  
-No scattered conversations.  
-Just one place where everything comes together.
-</p>
+<div class="solution-box">
+<strong>Reach more people</strong><br>
+Your request reaches the right audience faster
+</div>
 
 </div>
 
-<div class="solution-image">
+<div class="banner">
 <img src="Banner_1.png">
 </div>
 
-</div>
-
 </section>
-
 
 <!-- FEATURES -->
 
 <section class="section">
 
-<h2 style="text-align:center;">What you can do with LokaLinc</h2>
+<h2 style="text-align:center;">What you can do</h2>
 
 <div class="features">
 
 <div class="card">
 <h3>Temporary Housing</h3>
-<p>Find or offer short term stays when moving between cities</p>
+<p>Find or offer short stays when moving between cities</p>
 </div>
 
 <div class="card">
@@ -412,19 +323,18 @@ Just one place where everything comes together.
 </div>
 
 <div class="card">
-<h3>Community Discussions</h3>
-<p>Ask questions and share experiences</p>
+<h3>Community</h3>
+<p>Ask questions and get real help</p>
 </div>
 
 <div class="card">
 <h3>Built for Expats</h3>
-<p>Designed around real challenges people face</p>
+<p>Focused on real challenges</p>
 </div>
 
 </div>
 
 </section>
-
 
 <!-- WAITLIST -->
 
@@ -432,35 +342,30 @@ Just one place where everything comes together.
 
 <h2>Get early access</h2>
 
-<p>
-Be among the first to try LokaLinc.
-</p>
+<p>Be among the first to try LokaLinc</p>
 
 <p>
-Leave your details and we will let you know as soon as the app is ready.
+Leave your details and we will let you know when the app is ready
 </p>
 
 <p class="gdpr">
-You can request removal of your data at any time by contacting us.
+You can request removal of your data at any time by contacting us
 </p>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdR5SzuFea_y5iV_zatorZxH6Rm6RoHTKcKM335wVNL7zJxOQ/viewform?embedded=true"
-width="100%" height="900" frameborder="0">Loading…</iframe>
+width="100%" height="850" frameborder="0">Loading…</iframe>
 
 </section>
 
-</div>
-
-
 <footer>
 
-<div>© 2026 LokaLinc</div>
+<p>© 2026 LokaLinc</p>
 
-<div>
+<p>
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a>
 <a href="/imprint.html">Imprint</a>
-</div>
+</p>
 
 </footer>
 
