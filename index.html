@@ -8,9 +8,11 @@
 
 <title>LokaLinc — Living and Moving Together</title>
 
-<meta name="description" content="LokaLinc connects expats in Germany for temporary housing, travel support, and community discussions.">
+<meta name="description" content="LokaLinc connects expats in Germany for housing, travel support, and community.">
 
 <style>
+
+/* ---------- Base ---------- */
 
 body{
 margin:0;
@@ -20,26 +22,18 @@ color:#1f2937;
 }
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
-padding:40px 20px;
+padding:30px 20px;
 }
+
+/* ---------- Header ---------- */
 
 header{
 display:flex;
 align-items:center;
 gap:12px;
-margin-bottom:60px;
-}
-
-.logo{
-height:42px;
-}
-
-.brand{
-font-size:30px;
-font-weight:800;
-color:#10b981;
+margin-bottom:40px;
 }
 
 .brand-link{
@@ -50,44 +44,92 @@ text-decoration:none;
 color:inherit;
 }
 
+.logo{
+height:40px;
+}
+
+.brand{
+font-size:26px;
+font-weight:800;
+color:#10b981;
+}
+
+/* ---------- Hero ---------- */
+
 .hero{
-text-align:center;
-padding:40px 20px 80px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+padding:60px 40px;
+background:linear-gradient(135deg,#ecfdf5 0%, #f8fafc 100%);
+border-radius:20px;
+flex-wrap:wrap;
 }
 
-.hero h1{
-font-size:42px;
-margin-bottom:20px;
+.hero-left{
+flex:1;
+min-width:300px;
 }
 
-.hero p{
+.tagline{
+font-size:14px;
+font-weight:600;
+color:#10b981;
+margin-bottom:10px;
+}
+
+.hero-left h1{
+font-size:44px;
+margin:10px 0 20px 0;
+}
+
+.hero-left p{
 font-size:18px;
 color:#4b5563;
-max-width:700px;
-margin:auto;
+max-width:500px;
+line-height:1.6;
 }
 
+/* badges */
+
 .badges{
-margin-top:40px;
+margin-top:30px;
 display:flex;
-justify-content:center;
 gap:20px;
 flex-wrap:wrap;
 }
 
 .badges img{
-height:55px;
+height:50px;
 }
 
 .coming{
-margin-top:10px;
-font-size:14px;
+margin-top:6px;
+font-size:13px;
 color:#10b981;
 font-weight:600;
+text-align:center;
 }
 
+/* hero image */
+
+.hero-right{
+flex:1;
+min-width:280px;
+text-align:center;
+}
+
+.hero-right img{
+max-width:100%;
+border-radius:16px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* ---------- Sections ---------- */
+
 .section{
-margin-top:80px;
+margin-top:90px;
 }
 
 .section h2{
@@ -96,22 +138,29 @@ font-size:30px;
 margin-bottom:30px;
 }
 
+/* problem */
+
 .problem{
 max-width:700px;
 margin:auto;
 font-size:18px;
-color:#374151;
 line-height:1.8;
+color:#374151;
+text-align:center;
 }
+
+/* solution */
 
 .solution{
 text-align:center;
 max-width:700px;
 margin:auto;
 font-size:18px;
-color:#374151;
 line-height:1.8;
+color:#374151;
 }
+
+/* features */
 
 .features{
 display:grid;
@@ -131,9 +180,11 @@ margin-top:0;
 color:#10b981;
 }
 
+/* waitlist */
+
 .waitlist{
 text-align:center;
-margin-top:80px;
+margin-top:90px;
 background:white;
 padding:40px;
 border-radius:14px;
@@ -150,14 +201,7 @@ font-size:14px;
 color:#6b7280;
 }
 
-.notice{
-background:#ecfdf5;
-border:1px solid #10b981;
-padding:30px;
-border-radius:12px;
-margin-top:60px;
-text-align:center;
-}
+/* footer */
 
 footer{
 margin-top:100px;
@@ -176,6 +220,29 @@ text-decoration:none;
 color:#6b7280;
 }
 
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+.hero{
+padding:40px 20px;
+text-align:center;
+}
+
+.hero-left h1{
+font-size:34px;
+}
+
+.hero-left p{
+margin:auto;
+}
+
+.badges{
+justify-content:center;
+}
+
+}
+
 </style>
 </head>
 
@@ -192,15 +259,23 @@ color:#6b7280;
 
 <div id="home-content">
 
+<!-- HERO -->
+
 <section class="hero">
+
+<div class="hero-left">
+
+<div class="tagline">Living and Moving Together</div>
 
 <h1>Community for expats in Germany</h1>
 
 <p>
-Find housing, travel support, and real help from people who understand your situation.
+Find housing, travel support, and real help  
+from people who understand your situation.
 </p>
 
 <div class="badges">
+
 <div>
 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
 <div class="coming">Coming Soon</div>
@@ -210,10 +285,19 @@ Find housing, travel support, and real help from people who understand your situ
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
 <div class="coming">Coming Soon</div>
 </div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+<img src="Banner_1.png">
 </div>
 
 </section>
 
+
+<!-- PROBLEM -->
 
 <section class="section">
 
@@ -243,6 +327,8 @@ It works. But it should not be this hard.
 </section>
 
 
+<!-- SOLUTION -->
+
 <section class="section">
 
 <div class="solution">
@@ -269,6 +355,8 @@ Just one place where everything comes together.
 
 </section>
 
+
+<!-- FEATURES -->
 
 <section class="section">
 
@@ -301,6 +389,8 @@ Just one place where everything comes together.
 </section>
 
 
+<!-- WAITLIST -->
+
 <section class="waitlist">
 
 <h2>Get early access</h2>
@@ -325,27 +415,9 @@ width="100%" height="900" frameborder="0">Loading…</iframe>
 </div>
 
 
-<div id="app-link-content" style="display:none">
-
-<div class="notice">
-
-<h2>Open in the LokaLinc App</h2>
-
-<p id="route-message">
-This content is available inside the LokaLinc mobile app.
-Please open the app to continue.
-</p>
-
-</div>
-
-</div>
-
-
 <footer>
 
-<div>
-© 2026 LokaLinc
-</div>
+<div>© 2026 LokaLinc</div>
 
 <div>
 <a href="/privacy.html">Privacy</a>
@@ -356,44 +428,6 @@ Please open the app to continue.
 </footer>
 
 </div>
-
-
-<script>
-
-(function(){
-
-const params = new URLSearchParams(window.location.search);
-const redirectedPath = params.get("p");
-const route = redirectedPath || window.location.pathname;
-
-const home = document.getElementById("home-content");
-const app = document.getElementById("app-link-content");
-const message = document.getElementById("route-message");
-
-const isAppRoute =
-route.startsWith("/sublet/") ||
-route.startsWith("/reset-password");
-
-if(isAppRoute){
-
-home.style.display="none";
-app.style.display="block";
-
-if(route.startsWith("/reset-password")){
-message.textContent =
-"This password reset link belongs to the LokaLinc mobile app. Please open the app to continue.";
-}
-
-if(route.startsWith("/sublet/")){
-message.textContent =
-"This sublet listing is available in the LokaLinc mobile app. Please open the app to view it.";
-}
-
-}
-
-})();
-
-</script>
 
 </body>
 </html>
