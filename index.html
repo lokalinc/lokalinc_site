@@ -63,6 +63,13 @@ background:linear-gradient(135deg,#ecfdf5 0%, #f8fafc 100%);
 border-radius:20px;
 }
 
+.hero-brand{
+font-size:28px;
+font-weight:800;
+color:#10b981;
+margin-bottom:8px;
+}
+
 .tagline{
 font-size:14px;
 font-weight:600;
@@ -110,41 +117,41 @@ font-weight:600;
 margin-top:100px;
 }
 
-/* ---------- Problem ---------- */
+/* ---------- Problem (UPDATED) ---------- */
 
 .problem{
-max-width:700px;
+max-width:900px;
 margin:auto;
-font-size:18px;
-line-height:1.8;
-color:#374151;
 }
 
 .problem h2{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
-.problem-line{
-margin:16px 0;
-opacity:0;
-transform:translateY(10px);
-animation:fadeUp 0.6s ease forwards;
+.problem-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
 }
 
-.problem-line:nth-child(1){animation-delay:0.1s;}
-.problem-line:nth-child(2){animation-delay:0.2s;}
-.problem-line:nth-child(3){animation-delay:0.3s;}
-.problem-line:nth-child(4){animation-delay:0.4s;}
-.problem-line:nth-child(5){animation-delay:0.5s;}
+.problem-item{
+background:white;
+padding:18px 22px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+font-size:17px;
+color:#374151;
+}
 
-.problem-line.shift{
+.problem-item.alt{
 margin-left:40px;
+background:#f9fafb;
 color:#6b7280;
 }
 
 .problem-summary{
-margin-top:25px;
+margin-top:30px;
 text-align:center;
 color:#4b5563;
 }
@@ -155,7 +162,7 @@ text-align:center;
 font-weight:700;
 }
 
-/* ---------- Solution ---------- */
+/* ---------- Solution (UPDATED) ---------- */
 
 .solution-wrap{
 display:flex;
@@ -173,9 +180,19 @@ min-width:300px;
 margin-bottom:20px;
 }
 
-.solution-text p{
-font-size:18px;
-line-height:1.8;
+.solution-steps{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.solution-step{
+background:white;
+padding:18px 22px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+font-size:16px;
 color:#374151;
 }
 
@@ -257,15 +274,6 @@ text-decoration:none;
 color:#6b7280;
 }
 
-/* ---------- Animation ---------- */
-
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
 /* ---------- Mobile ---------- */
 
 @media(max-width:768px){
@@ -274,7 +282,7 @@ transform:translateY(0);
 font-size:32px;
 }
 
-.problem-line.shift{
+.problem-item.alt{
 margin-left:0;
 }
 
@@ -304,6 +312,7 @@ flex-direction:column;
 
 <section class="hero">
 
+<div class="hero-brand">LokaLinc</div>
 <div class="tagline">Living and Moving Together</div>
 
 <h1>Community for expats in Germany</h1>
@@ -335,11 +344,13 @@ Find housing, travel support, and real help from people who understand your situ
 
 <h2>Still doing it the hard way?</h2>
 
-<div class="problem-line">Jumping between WhatsApp groups…</div>
-<div class="problem-line shift">Hoping someone replies in time…</div>
-<div class="problem-line">Searching everywhere for a place to stay…</div>
-<div class="problem-line shift">Posting in multiple places just to get a response…</div>
-<div class="problem-line">Trying to find someone who can actually help…</div>
+<div class="problem-grid">
+<div class="problem-item">Jumping between WhatsApp groups…</div>
+<div class="problem-item alt">Hoping someone replies in time…</div>
+<div class="problem-item">Searching everywhere for a place to stay…</div>
+<div class="problem-item alt">Posting in multiple places just to get a response…</div>
+<div class="problem-item">Trying to find someone who can actually help…</div>
+</div>
 
 <p class="problem-summary">
 You eventually find a solution. But it takes time, effort, and sometimes a bit of luck.
@@ -366,21 +377,12 @@ There should be a simpler way.
 
 <h2>That is exactly why LokaLinc exists</h2>
 
-<p>
-LokaLinc brings everything into one place.
-</p>
-
-<p>
-Find temporary housing when you need it.  
-Connect with people for travel support.  
-Ask questions and get help from a community that understands your journey.
-</p>
-
-<p>
-No searching across multiple platforms.  
-No scattered conversations.  
-Just one place where everything comes together.
-</p>
+<div class="solution-steps">
+<div class="solution-step">📍 Find temporary housing when you need it</div>
+<div class="solution-step">✈️ Connect with people for travel support</div>
+<div class="solution-step">💬 Ask questions and get real answers from the community</div>
+<div class="solution-step">🌐 Everything in one place — no more scattered platforms</div>
+</div>
 
 </div>
 
