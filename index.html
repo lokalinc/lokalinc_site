@@ -83,6 +83,8 @@ margin:auto;
 line-height:1.6;
 }
 
+/* badges */
+
 .badges{
 margin-top:30px;
 display:flex;
@@ -110,74 +112,80 @@ margin-top:100px;
 
 /* ---------- Problem ---------- */
 
-.problem-block{
+.problem{
 max-width:700px;
 margin:auto;
+font-size:18px;
+line-height:1.8;
+color:#374151;
+}
+
+.problem h2{
 text-align:center;
+margin-bottom:30px;
 }
 
-.problem-intro{
+.problem-line{
+margin:16px 0;
+opacity:0;
+transform:translateY(10px);
+animation:fadeUp 0.6s ease forwards;
+}
+
+.problem-line:nth-child(1){animation-delay:0.1s;}
+.problem-line:nth-child(2){animation-delay:0.2s;}
+.problem-line:nth-child(3){animation-delay:0.3s;}
+.problem-line:nth-child(4){animation-delay:0.4s;}
+.problem-line:nth-child(5){animation-delay:0.5s;}
+
+.problem-line.shift{
+margin-left:40px;
 color:#6b7280;
-margin-bottom:20px;
-}
-
-.problem-list{
-list-style:none;
-padding:0;
-margin:0;
-}
-
-.problem-list li{
-margin:10px 0;
-padding:14px;
-background:white;
-border-radius:10px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
-font-size:15px;
 }
 
 .problem-summary{
-margin-top:20px;
+margin-top:25px;
+text-align:center;
 color:#4b5563;
 }
 
 .problem-highlight{
 margin-top:10px;
+text-align:center;
 font-weight:700;
 }
 
 /* ---------- Solution ---------- */
 
-.solution-block{
-max-width:700px;
-margin:auto;
-text-align:center;
-margin-top:20px;
+.solution-wrap{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
 }
 
-.solution-item{
+.solution-text{
+flex:1;
+min-width:300px;
+}
+
+.solution-text h2{
 margin-bottom:20px;
 }
 
-.solution-item strong{
-color:#10b981;
-display:block;
-margin-bottom:5px;
-}
-
-.solution-item p{
-margin:0;
+.solution-text p{
+font-size:18px;
+line-height:1.8;
 color:#374151;
 }
 
-/* ---------- Banner ---------- */
-
-.banner{
-margin-top:40px;
+.solution-image{
+flex:1;
+min-width:280px;
 text-align:center;
 }
 
-.banner img{
+.solution-image img{
 max-width:100%;
 border-radius:16px;
 box-shadow:0 20px 40px rgba(0,0,0,0.1);
@@ -197,6 +205,11 @@ background:white;
 padding:28px;
 border-radius:14px;
 box-shadow:0 10px 25px rgba(0,0,0,0.06);
+transition:transform 0.2s ease;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
@@ -244,12 +257,29 @@ text-decoration:none;
 color:#6b7280;
 }
 
+/* ---------- Animation ---------- */
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 /* ---------- Mobile ---------- */
 
 @media(max-width:768px){
 
 .hero h1{
 font-size:32px;
+}
+
+.problem-line.shift{
+margin-left:0;
+}
+
+.solution-wrap{
+flex-direction:column;
 }
 
 }
@@ -298,68 +328,70 @@ Find housing, travel support, and real help from people who understand your situ
 
 </section>
 
+
 <!-- PROBLEM -->
 
-<section class="section">
+<section class="section problem">
 
-<h2 style="text-align:center;">Still doing it the hard way?</h2>
+<h2>Still doing it the hard way?</h2>
 
-<div class="problem-block">
-
-<p class="problem-intro">
-It usually looks something like this:
-</p>
-
-<ul class="problem-list">
-<li>Jumping between WhatsApp groups</li>
-<li>Waiting and hoping someone replies</li>
-<li>Searching everywhere for a place to stay</li>
-<li>Posting in multiple places just to get a response</li>
-<li>Trying to find someone who can actually help</li>
-</ul>
+<div class="problem-line">Jumping between WhatsApp groups…</div>
+<div class="problem-line shift">Hoping someone replies in time…</div>
+<div class="problem-line">Searching everywhere for a place to stay…</div>
+<div class="problem-line shift">Posting in multiple places just to get a response…</div>
+<div class="problem-line">Trying to find someone who can actually help…</div>
 
 <p class="problem-summary">
 You eventually find a solution. But it takes time, effort, and sometimes a bit of luck.
+</p>
+
+<p class="problem-summary">
+It works. But it should not be this hard.
 </p>
 
 <p class="problem-highlight">
 There should be a simpler way.
 </p>
 
-</div>
-
 </section>
+
 
 <!-- SOLUTION -->
 
 <section class="section">
 
-<h2 style="text-align:center;">That is exactly why LokaLinc exists</h2>
+<div class="solution-wrap">
 
-<div class="solution-block">
+<div class="solution-text">
 
-<div class="solution-item">
-<strong>Everything in one place</strong>
-<p>No more jumping across platforms or scattered conversations</p>
+<h2>That is exactly why LokaLinc exists</h2>
+
+<p>
+LokaLinc brings everything into one place.
+</p>
+
+<p>
+Find temporary housing when you need it.  
+Connect with people for travel support.  
+Ask questions and get help from a community that understands your journey.
+</p>
+
+<p>
+No searching across multiple platforms.  
+No scattered conversations.  
+Just one place where everything comes together.
+</p>
+
 </div>
 
-<div class="solution-item">
-<strong>Housing, travel, and community</strong>
-<p>Find stays, connect with travellers, and ask questions in one simple space</p>
-</div>
-
-<div class="solution-item">
-<strong>Reach the right people faster</strong>
-<p>Your request reaches a larger and more relevant audience</p>
-</div>
-
-</div>
-
-<div class="banner">
+<div class="solution-image">
 <img src="Banner_1.png">
 </div>
 
+</div>
+
 </section>
+
 
 <!-- FEATURES -->
 
@@ -393,13 +425,16 @@ There should be a simpler way.
 
 </section>
 
+
 <!-- WAITLIST -->
 
 <section class="waitlist">
 
 <h2>Get early access</h2>
 
-<p>Be among the first to try LokaLinc.</p>
+<p>
+Be among the first to try LokaLinc.
+</p>
 
 <p>
 Leave your details and we will let you know as soon as the app is ready.
@@ -415,6 +450,7 @@ width="100%" height="900" frameborder="0">Loading…</iframe>
 </section>
 
 </div>
+
 
 <footer>
 
