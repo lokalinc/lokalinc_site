@@ -90,68 +90,55 @@ margin:auto;
 line-height:1.6;
 }
 
-/* badges */
-
-.badges{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.badges img{
-height:50px;
-}
-
-.coming{
-margin-top:6px;
-font-size:13px;
-color:#10b981;
-font-weight:600;
-}
-
-/* ---------- Sections ---------- */
-
-.section{
-margin-top:100px;
-}
-
-/* ---------- Problem (UPDATED) ---------- */
+/* ---------- Problem (CHAT STYLE) ---------- */
 
 .problem{
-max-width:900px;
+max-width:700px;
 margin:auto;
 }
 
 .problem h2{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
-.problem-grid{
-display:grid;
-grid-template-columns:1fr;
-gap:20px;
+.chat{
+background:#e5ddd5;
+padding:20px;
+border-radius:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
 }
 
-.problem-item{
-background:white;
-padding:18px 22px;
+.message{
+max-width:75%;
+padding:10px 14px;
 border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
-font-size:17px;
-color:#374151;
+font-size:14px;
+line-height:1.4;
+position:relative;
 }
 
-.problem-item.alt{
-margin-left:40px;
-background:#f9fafb;
+.left{
+background:white;
+align-self:flex-start;
+}
+
+.right{
+background:#dcf8c6;
+align-self:flex-end;
+}
+
+.time{
+font-size:10px;
 color:#6b7280;
+margin-top:4px;
+text-align:right;
 }
 
 .problem-summary{
-margin-top:30px;
+margin-top:25px;
 text-align:center;
 color:#4b5563;
 }
@@ -162,7 +149,7 @@ text-align:center;
 font-weight:700;
 }
 
-/* ---------- Solution (UPDATED) ---------- */
+/* ---------- Solution ---------- */
 
 .solution-wrap{
 display:flex;
@@ -181,7 +168,6 @@ margin-bottom:20px;
 }
 
 .solution-steps{
-margin-top:20px;
 display:flex;
 flex-direction:column;
 gap:15px;
@@ -189,23 +175,44 @@ gap:15px;
 
 .solution-step{
 background:white;
-padding:18px 22px;
+padding:18px;
 border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
 font-size:16px;
-color:#374151;
 }
+
+/* app preview */
 
 .solution-image{
 flex:1;
 min-width:280px;
-text-align:center;
+position:relative;
+height:500px;
 }
 
-.solution-image img{
-max-width:100%;
-border-radius:16px;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
+.phone{
+position:absolute;
+width:220px;
+border-radius:24px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.phone1{
+top:0;
+left:0;
+transform:rotate(-6deg);
+}
+
+.phone2{
+top:60px;
+left:120px;
+transform:rotate(6deg);
+}
+
+.phone3{
+top:140px;
+left:40px;
+transform:rotate(-3deg);
 }
 
 /* ---------- Features ---------- */
@@ -282,12 +289,21 @@ color:#6b7280;
 font-size:32px;
 }
 
-.problem-item.alt{
-margin-left:0;
-}
-
 .solution-wrap{
 flex-direction:column;
+}
+
+.solution-image{
+height:auto;
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+.phone{
+position:relative;
+width:30%;
+transform:none;
 }
 
 }
@@ -321,22 +337,7 @@ flex-direction:column;
 Find housing, travel support, and real help from people who understand your situation.
 </p>
 
-<div class="badges">
-
-<div>
-<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
-<div class="coming">Coming Soon</div>
-</div>
-
-<div>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-<div class="coming">Coming Soon</div>
-</div>
-
-</div>
-
 </section>
-
 
 <!-- PROBLEM -->
 
@@ -344,12 +345,33 @@ Find housing, travel support, and real help from people who understand your situ
 
 <h2>Still doing it the hard way?</h2>
 
-<div class="problem-grid">
-<div class="problem-item">Jumping between WhatsApp groups…</div>
-<div class="problem-item alt">Hoping someone replies in time…</div>
-<div class="problem-item">Searching everywhere for a place to stay…</div>
-<div class="problem-item alt">Posting in multiple places just to get a response…</div>
-<div class="problem-item">Trying to find someone who can actually help…</div>
+<div class="chat">
+
+<div class="message right">
+Anyone travelling Frankfurt → Munich tomorrow?
+<div class="time">09:12</div>
+</div>
+
+<div class="message right">
+Please urgent 🙏
+<div class="time">09:14</div>
+</div>
+
+<div class="message left">
+Maybe try Facebook groups?
+<div class="time">09:20</div>
+</div>
+
+<div class="message right">
+Already tried 😞
+<div class="time">09:21</div>
+</div>
+
+<div class="message right">
+Anyone??
+<div class="time">09:45</div>
+</div>
+
 </div>
 
 <p class="problem-summary">
@@ -365,7 +387,6 @@ There should be a simpler way.
 </p>
 
 </section>
-
 
 <!-- SOLUTION -->
 
@@ -387,13 +408,14 @@ There should be a simpler way.
 </div>
 
 <div class="solution-image">
-<img src="Banner_1.png">
+<img src="Light1.jpg" class="phone phone1">
+<img src="Light3.jpg" class="phone phone2">
+<img src="Light5.jpg" class="phone phone3">
 </div>
 
 </div>
 
 </section>
-
 
 <!-- FEATURES -->
 
@@ -427,7 +449,6 @@ There should be a simpler way.
 
 </section>
 
-
 <!-- WAITLIST -->
 
 <section class="waitlist">
@@ -452,7 +473,6 @@ width="100%" height="900" frameborder="0">Loading…</iframe>
 </section>
 
 </div>
-
 
 <footer>
 
