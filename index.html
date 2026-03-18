@@ -45,7 +45,7 @@ color:#10b981;
 /* ---------- Hero ---------- */
 
 .hero{
-padding:70px 20px 40px; /* reduced bottom space */
+padding:70px 20px 40px;
 text-align:center;
 background:linear-gradient(135deg,#ecfdf5 0%, #f8fafc 100%);
 border-radius:20px;
@@ -63,33 +63,53 @@ color:#10b981;
 margin-bottom:10px;
 }
 
-.hero h1{ font-size:42px; }
-
-.hero p{
-font-size:18px;
-color:#4b5563;
-}
-
 /* ---------- PROBLEM ---------- */
 
 .problem{
-margin-top:40px; /* reduced gap */
+margin-top:40px;
 text-align:center;
 }
 
-.phone-wrapper{
+.chaos-wrap{
 position:relative;
-width:320px;
-height:640px;
-margin:40px auto;
-border-radius:36px;
+height:600px;
+max-width:1000px;
+margin:auto;
+}
+
+/* phone */
+
+.phone{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:300px;
+height:620px;
+border-radius:40px;
 background:#fff;
 border:2px solid #e5e7eb;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 overflow:hidden;
 }
 
-/* notch */
+/* top bar */
+
+.topbar{
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 14px;
+font-size:12px;
+font-weight:600;
+z-index:3;
+}
+
 .notch{
 position:absolute;
 top:8px;
@@ -99,30 +119,30 @@ width:120px;
 height:28px;
 background:#000;
 border-radius:20px;
-z-index:3;
 }
 
 /* screen */
-.phone-screen{
+
+.screen{
 position:absolute;
 top:0;
+bottom:0;
 left:0;
 right:0;
-bottom:0;
 background:#e5ddd5;
-padding:40px 10px 10px;
+padding-top:50px;
 }
 
 /* bubbles */
 
 .bubble{
 position:absolute;
-padding:12px 16px;
+padding:14px 18px;
 border-radius:16px;
 font-size:14px;
 line-height:1.4;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-max-width:240px;
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+max-width:260px;
 }
 
 .green{ background:#dcf8c6; }
@@ -131,20 +151,26 @@ max-width:240px;
 .time{
 font-size:10px;
 color:#6b7280;
-margin-top:4px;
+margin-top:5px;
 text-align:right;
 }
 
-/* positions (balanced for desktop + mobile) */
+/* scattered positions */
 
-.b1{ top:60px; left:20px;}
-.b2{ top:120px; right:20px;}
-.b3{ top:180px; left:30px;}
-.b4{ top:240px; right:30px;}
-.b5{ top:300px; left:20px;}
-.b6{ top:360px; right:20px;}
-.b7{ top:430px; left:30px;}
-.b8{ top:500px; right:20px;}
+.b1{ top:40px; left:60%; transform:rotate(-8deg);}
+.b2{ top:110px; left:20%; transform:rotate(6deg);}
+.b3{ top:170px; left:70%; transform:rotate(-10deg);}
+.b4{ top:230px; left:10%; transform:rotate(8deg);}
+.b5{ top:300px; left:65%; transform:rotate(-6deg);}
+.b6{ top:360px; left:15%; transform:rotate(10deg);}
+.b7{ top:420px; left:70%; transform:rotate(-7deg);}
+.b8{ top:480px; left:20%; transform:rotate(6deg);}
+
+/* outside */
+
+.b9{ top:20px; left:0%; transform:rotate(-15deg);}
+.b10{ top:120px; right:0%; transform:rotate(12deg);}
+.b11{ bottom:40px; left:-40px; transform:rotate(15deg);}
 
 /* ---------- Solution ---------- */
 
@@ -171,8 +197,6 @@ border-radius:10px;
 box-shadow:0 8px 18px rgba(0,0,0,0.05);
 }
 
-/* overlap images */
-
 .solution-image{
 flex:1;
 display:flex;
@@ -188,6 +212,37 @@ box-shadow:0 20px 40px rgba(0,0,0,0.15);
 
 .img2{ margin-left:-50px; }
 .img3{ margin-left:-50px; }
+
+/* ---------- Features ---------- */
+
+.features{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.card h3{
+color:#10b981;
+}
+
+/* ---------- Waitlist ---------- */
+
+.waitlist{
+text-align:center;
+margin-top:100px;
+background:white;
+padding:40px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
 
 /* ---------- Footer ---------- */
 
@@ -206,22 +261,6 @@ footer a{
 margin-left:20px;
 text-decoration:none;
 color:#6b7280;
-}
-
-/* ---------- Mobile ---------- */
-
-@media(max-width:768px){
-
-.phone-wrapper{
-width:280px;
-height:560px;
-}
-
-.bubble{
-max-width:200px;
-font-size:13px;
-}
-
 }
 
 </style>
@@ -251,53 +290,44 @@ font-size:13px;
 
 <h2>Still doing it the hard way?</h2>
 
-<div class="phone-wrapper">
+<div class="chaos-wrap">
+
+<div class="phone">
+
+<div class="topbar">
+<span>9:41</span>
+<span>📶 🔋</span>
+</div>
 
 <div class="notch"></div>
 
-<div class="phone-screen">
-
-<div class="bubble green b1">
-Need help for my mother 🙏
-<div class="time">13:42</div>
-</div>
-
-<div class="bubble white b2">
-Hello, is anyone traveling from Munich to Bangalore on the 23rd?
-<div class="time">18:05</div>
-</div>
-
-<div class="bubble white b3">
-Check some WhatsApp group
-<div class="time">12:21</div>
-</div>
-
-<div class="bubble white b4">
-Does anyone have a FB/WA group link for Berlin?
-<div class="time">20:17</div>
-</div>
-
-<div class="bubble green b5">
-Tried everywhere 😞
-<div class="time">09:58</div>
-</div>
-
-<div class="bubble white b6">
-I’m looking for someone who does kitchen installation (Küchenmontage). Any suggestions or contacts would be appreciated!
-<div class="time">22:11</div>
-</div>
-
-<div class="bubble green b7">
-Hello everyone, anyone travelling from India to Hamburg? I need some urgent baby oil 🙏
-<div class="time">14:33</div>
-</div>
-
-<div class="bubble white b8">
-Any group for accommodation in Hamburg??
-<div class="time">19:26</div>
-</div>
+<div class="screen"></div>
 
 </div>
+
+<!-- your messages -->
+
+<div class="bubble green b1">Need help for my mother 🙏<div class="time">13:42</div></div>
+
+<div class="bubble white b2">Hello, is anyone traveling from Munich to Bangalore on the 23rd?<div class="time">18:05</div></div>
+
+<div class="bubble white b3">Check some WhatsApp group<div class="time">12:21</div></div>
+
+<div class="bubble white b4">Does anyone have a FB/WA group link for Berlin?<div class="time">20:17</div></div>
+
+<div class="bubble green b5">Tried everywhere 😞<div class="time">09:58</div></div>
+
+<div class="bubble white b6">I’m looking for someone who does kitchen installation (Küchenmontage). Any suggestions or contacts would be appreciated!<div class="time">22:11</div></div>
+
+<div class="bubble green b7">Hello everyone, anyone travelling from India to Hamburg? I need some urgent baby oil 🙏<div class="time">14:33</div></div>
+
+<div class="bubble white b8">Any group for accommodation in Hamburg??<div class="time">19:26</div></div>
+
+<div class="bubble green b9">Anyone??<div class="time">16:12</div></div>
+
+<div class="bubble white b10">Try asking around<div class="time">11:48</div></div>
+
+<div class="bubble green b11">Please help 🙏<div class="time">21:03</div></div>
 
 </div>
 
@@ -329,6 +359,49 @@ Any group for accommodation in Hamburg??
 <img src="Light3.jpg" class="img2">
 <img src="Light5.jpg" class="img3">
 </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section>
+
+<h2 style="text-align:center;">What you can do with LokaLinc</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>Temporary Housing</h3>
+<p>Find or offer short term stays when moving between cities</p>
+</div>
+
+<div class="card">
+<h3>Travel Support</h3>
+<p>Connect with people travelling similar routes</p>
+</div>
+
+<div class="card">
+<h3>Community Discussions</h3>
+<p>Ask questions and share experiences</p>
+</div>
+
+<div class="card">
+<h3>Built for Expats</h3>
+<p>Designed around real challenges people face</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- WAITLIST -->
+
+<section class="waitlist">
+
+<h2>Get early access</h2>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdR5SzuFea_y5iV_zatorZxH6Rm6RoHTKcKM335wVNL7zJxOQ/viewform?embedded=true"
+width="100%" height="900" frameborder="0">Loading…</iframe>
 
 </section>
 
