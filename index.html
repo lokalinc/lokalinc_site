@@ -72,7 +72,7 @@ text-align:center;
 
 .chaos-wrap{
 position:relative;
-height:640px;
+height:620px;
 max-width:1000px;
 margin:auto;
 }
@@ -83,12 +83,14 @@ margin:auto;
 position:absolute;
 left:50%;
 top:50%;
-transform:translate(-50%,-50%);
-width:310px;
-height:640px;
-border-radius:46px;
-background:#000;
-box-shadow:0 30px 80px rgba(0,0,0,0.25);
+transform:translate(-50%,-50%) scale(0.8);
+width:300px;
+height:620px;
+border-radius:42px;
+background:#111;
+box-shadow:
+0 25px 60px rgba(0,0,0,0.25),
+inset 0 0 0 2px #1f2937;
 overflow:hidden;
 }
 
@@ -99,34 +101,37 @@ position:absolute;
 top:0;
 left:0;
 right:0;
-height:40px;
+height:44px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:0 14px;
+padding:0 24px;
 font-size:12px;
 font-weight:600;
-color:white;
-z-index:5;
+color:#fff;
+z-index:10;
 }
+
+/* notch */
 
 .notch{
 position:absolute;
-top:8px;
+top:0px;
 left:50%;
 transform:translateX(-50%);
-width:140px;
+width:110px;
 height:30px;
 background:#000;
-border-radius:20px;
-z-index:6;
+border-bottom-left-radius: 18px;
+border-bottom-right-radius: 18px;
+z-index:11;
 }
 
-/* whatsapp header */
+/* WhatsApp header */
 
 .chat-header{
 position:absolute;
-top:40px;
+top:36px;
 left:0;
 right:0;
 height:50px;
@@ -136,8 +141,15 @@ display:flex;
 align-items:center;
 padding:0 12px;
 font-size:14px;
-font-weight:600;
 z-index:4;
+}
+
+.chat-header .dp{
+width:28px;
+height:28px;
+border-radius:50%;
+background:#cbd5e1;
+margin-right:10px;
 }
 
 /* screen */
@@ -148,11 +160,11 @@ top:0;
 bottom:0;
 left:0;
 right:0;
-background:#ece5dd;
+background:#efe7dd;
 background-image:
-radial-gradient(#dcd2c6 1px, transparent 1px);
-background-size:22px 22px;
-padding-top:100px;
+radial-gradient(#d6ccc2 1px, transparent 1px);
+background-size:20px 20px;
+padding-top:90px;
 }
 
 /* bubbles */
@@ -163,8 +175,8 @@ padding:12px 16px;
 border-radius:12px;
 font-size:13px;
 line-height:1.4;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-max-width:240px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+max-width:220px;
 }
 
 .green{ background:#dcf8c6; }
@@ -177,22 +189,20 @@ margin-top:5px;
 text-align:right;
 }
 
-/* scattered positions */
+/* positions (within limits) */
 
-.b1{ top:120px; left:58%; transform:rotate(-6deg);}
-.b2{ top:180px; left:18%; transform:rotate(7deg);}
-.b3{ top:240px; left:70%; transform:rotate(-8deg);}
-.b4{ top:300px; left:10%; transform:rotate(6deg);}
-.b5{ top:360px; left:65%; transform:rotate(-5deg);}
-.b6{ top:420px; left:15%; transform:rotate(8deg);}
-.b7{ top:480px; left:70%; transform:rotate(-6deg);}
-.b8{ top:540px; left:20%; transform:rotate(5deg);}
+.b1{ top:120px; left:55%; transform:rotate(-6deg);}
+.b2{ top:170px; left:20%; transform:rotate(6deg);}
+.b3{ top:230px; left:70%; transform:rotate(-7deg);}
+.b4{ top:290px; left:10%; transform:rotate(6deg);}
+.b5{ top:340px; left:65%; transform:rotate(-5deg);}
+.b6{ top:400px; left:15%; transform:rotate(7deg);}
+.b7{ top:460px; left:70%; transform:rotate(-6deg);}
+.b8{ top:510px; left:25%; transform:rotate(5deg);}
 
-/* outside */
-
-.b9{ top:140px; left:-20px; transform:rotate(-10deg);}
-.b10{ top:260px; right:-20px; transform:rotate(10deg);}
-.b11{ bottom:50px; left:-20px; transform:rotate(12deg);}
+.b9{ top:150px; left:-15px; transform:rotate(-10deg);}
+.b10{ top:250px; right:-15px; transform:rotate(10deg);}
+.b11{ bottom:40px; left:-15px; transform:rotate(12deg);}
 
 /* ---------- Solution ---------- */
 
@@ -319,32 +329,25 @@ color:#6b7280;
 
 <div class="notch"></div>
 
-<div class="chat-header">WhatsApp</div>
+<div class="chat-header">
+<div class="dp"></div>
+<span>WhatsApp Groups</span>
+</div>
 
 <div class="screen"></div>
 
 </div>
 
 <div class="bubble green b1">Need help for my mother 🙏<div class="time">13:42</div></div>
-
 <div class="bubble white b2">Hello, is anyone traveling from Munich to Bangalore on the 23rd?<div class="time">18:05</div></div>
-
 <div class="bubble green b3">Check some WhatsApp group<div class="time">12:21</div></div>
-
 <div class="bubble white b4">Does anyone have a FB/WA group link for Berlin?<div class="time">20:17</div></div>
-
 <div class="bubble green b5">Tried everywhere 😞<div class="time">09:58</div></div>
-
 <div class="bubble green b6">I’m looking for someone who does kitchen installation (Küchenmontage). Any suggestions or contacts would be appreciated!<div class="time">22:11</div></div>
-
 <div class="bubble green b7">Hello everyone, anyone travelling from India to Hamburg? I need some urgent baby oil 🙏<div class="time">14:33</div></div>
-
 <div class="bubble green b8">Any group for accommodation in Hamburg??<div class="time">19:26</div></div>
-
 <div class="bubble green b9">Anyone??<div class="time">16:12</div></div>
-
 <div class="bubble white b10">Try asking around<div class="time">11:48</div></div>
-
 <div class="bubble white b11">Please help 🙏<div class="time">21:03</div></div>
 
 </div>
