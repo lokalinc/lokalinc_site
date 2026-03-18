@@ -90,10 +90,10 @@ margin:auto;
 line-height:1.6;
 }
 
-/* ---------- Problem (CHAT STYLE) ---------- */
+/* ---------- Problem (MESSY CHAT) ---------- */
 
 .problem{
-max-width:700px;
+max-width:800px;
 margin:auto;
 }
 
@@ -104,17 +104,21 @@ margin-bottom:30px;
 
 .chat{
 background:#e5ddd5;
-padding:20px;
+padding:30px;
 border-radius:20px;
 display:flex;
 flex-direction:column;
-gap:12px;
+gap:18px;
+position:relative;
+overflow:hidden;
 }
 
+/* bubbles */
+
 .message{
-max-width:75%;
+max-width:70%;
 padding:10px 14px;
-border-radius:12px;
+border-radius:14px;
 font-size:14px;
 line-height:1.4;
 position:relative;
@@ -130,23 +134,19 @@ background:#dcf8c6;
 align-self:flex-end;
 }
 
+/* messy offsets */
+
+.m1{ margin-left:0 }
+.m2{ margin-left:40px }
+.m3{ margin-left:10px }
+.m4{ margin-left:80px }
+.m5{ margin-left:20px }
+
 .time{
 font-size:10px;
 color:#6b7280;
 margin-top:4px;
 text-align:right;
-}
-
-.problem-summary{
-margin-top:25px;
-text-align:center;
-color:#4b5563;
-}
-
-.problem-highlight{
-margin-top:10px;
-text-align:center;
-font-weight:700;
 }
 
 /* ---------- Solution ---------- */
@@ -181,38 +181,19 @@ box-shadow:0 10px 20px rgba(0,0,0,0.05);
 font-size:16px;
 }
 
-/* app preview */
+/* clean app preview */
 
 .solution-image{
 flex:1;
-min-width:280px;
-position:relative;
-height:500px;
+display:flex;
+justify-content:center;
+gap:20px;
 }
 
-.phone{
-position:absolute;
-width:220px;
-border-radius:24px;
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
-
-.phone1{
-top:0;
-left:0;
-transform:rotate(-6deg);
-}
-
-.phone2{
-top:60px;
-left:120px;
-transform:rotate(6deg);
-}
-
-.phone3{
-top:140px;
-left:40px;
-transform:rotate(-3deg);
+.solution-image img{
+width:180px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
 }
 
 /* ---------- Features ---------- */
@@ -293,17 +274,8 @@ font-size:32px;
 flex-direction:column;
 }
 
-.solution-image{
-height:auto;
-display:flex;
-justify-content:center;
-gap:10px;
-}
-
-.phone{
-position:relative;
-width:30%;
-transform:none;
+.chat{
+padding:20px;
 }
 
 }
@@ -347,30 +319,27 @@ Find housing, travel support, and real help from people who understand your situ
 
 <div class="chat">
 
-<div class="message right">
-Anyone travelling Frankfurt → Munich tomorrow?
-<div class="time">09:12</div>
-</div>
+<div class="message right m2">Anyone travelling Mumbai → Frankfurt next week?<div class="time">09:02</div></div>
 
-<div class="message right">
-Please urgent 🙏
-<div class="time">09:14</div>
-</div>
+<div class="message right m4">Need help for my mother 🙏<div class="time">23:18</div></div>
 
-<div class="message left">
-Maybe try Facebook groups?
-<div class="time">09:20</div>
-</div>
+<div class="message left m1">Try Indian group on Facebook?<div class="time">08:14</div></div>
 
-<div class="message right">
-Already tried 😞
-<div class="time">09:21</div>
-</div>
+<div class="message right m3">Already posted there 😞<div class="time">09:12</div></div>
 
-<div class="message right">
-Anyone??
-<div class="time">09:45</div>
-</div>
+<div class="message right m5">Anyone Munich → Bengaluru this weekend?<div class="time">17:35</div></div>
+
+<div class="message left m2">Following<div class="time">14:03</div></div>
+
+<div class="message right m4">Please urgent 🙏<div class="time">12:30</div></div>
+
+<div class="message right m3">Can someone carry documents to India?<div class="time">10:07</div></div>
+
+<div class="message left m1">Maybe ask your friends?<div class="time">18:24</div></div>
+
+<div class="message right m5">Tried everywhere 😞<div class="time">21:57</div></div>
+
+<div class="message right m2">Anyone??<div class="time">10:05</div></div>
 
 </div>
 
@@ -408,9 +377,9 @@ There should be a simpler way.
 </div>
 
 <div class="solution-image">
-<img src="Light1.jpg" class="phone phone1">
-<img src="Light3.jpg" class="phone phone2">
-<img src="Light5.jpg" class="phone phone3">
+<img src="Light1.jpg">
+<img src="Light3.jpg">
+<img src="Light5.jpg">
 </div>
 
 </div>
