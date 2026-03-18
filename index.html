@@ -8,8 +8,6 @@
 
 <title>LokaLinc — Living and Moving Together</title>
 
-<meta name="description" content="LokaLinc connects expats in Germany for housing, travel support, and community.">
-
 <style>
 
 /* ---------- Base ---------- */
@@ -27,37 +25,10 @@ margin:auto;
 padding:30px 20px;
 }
 
-/* ---------- Header ---------- */
-
-header{
-display:flex;
-align-items:center;
-gap:12px;
-margin-bottom:40px;
-}
-
-.brand-link{
-display:flex;
-align-items:center;
-gap:12px;
-text-decoration:none;
-color:inherit;
-}
-
-.logo{
-height:40px;
-}
-
-.brand{
-font-size:26px;
-font-weight:800;
-color:#10b981;
-}
-
 /* ---------- Hero ---------- */
 
 .hero{
-padding:70px 20px 90px 20px;
+padding:70px 20px 90px;
 text-align:center;
 background:linear-gradient(135deg,#ecfdf5 0%, #f8fafc 100%);
 border-radius:20px;
@@ -67,80 +38,69 @@ border-radius:20px;
 font-size:28px;
 font-weight:800;
 color:#10b981;
-margin-bottom:8px;
 }
 
 .tagline{
 font-size:14px;
-font-weight:600;
 color:#10b981;
 margin-bottom:10px;
 }
 
 .hero h1{
 font-size:42px;
-margin-bottom:20px;
 }
 
 .hero p{
 font-size:18px;
 color:#4b5563;
-max-width:600px;
-margin:auto;
-line-height:1.6;
 }
 
-/* ---------- Problem (MESSY CHAT) ---------- */
+/* ---------- PROBLEM (CHAOS) ---------- */
 
 .problem{
-max-width:800px;
-margin:auto;
-}
-
-.problem h2{
+margin-top:100px;
 text-align:center;
-margin-bottom:30px;
 }
 
-.chat{
-background:#e5ddd5;
-padding:30px;
-border-radius:20px;
-display:flex;
-flex-direction:column;
-gap:18px;
+.chat-bg{
 position:relative;
-overflow:hidden;
+background:#e5ddd5;
+border-radius:20px;
+height:420px;
+margin-top:30px;
+overflow:visible;
 }
 
 /* bubbles */
 
-.message{
-max-width:70%;
+.bubble{
+position:absolute;
 padding:10px 14px;
 border-radius:14px;
-font-size:14px;
-line-height:1.4;
-position:relative;
+font-size:13px;
+max-width:180px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-.left{
-background:white;
-align-self:flex-start;
-}
+.green{ background:#dcf8c6; }
+.white{ background:white; }
 
-.right{
-background:#dcf8c6;
-align-self:flex-end;
-}
+/* positions (messy layout) */
 
-/* messy offsets */
-
-.m1{ margin-left:0 }
-.m2{ margin-left:40px }
-.m3{ margin-left:10px }
-.m4{ margin-left:80px }
-.m5{ margin-left:20px }
+.b1{top:20px; left:60%; transform:rotate(-6deg);}
+.b2{top:80px; left:65%; transform:rotate(4deg);}
+.b3{top:120px; left:20%; transform:rotate(-8deg);}
+.b4{top:180px; left:55%; transform:rotate(6deg);}
+.b5{top:240px; left:25%; transform:rotate(-5deg);}
+.b6{top:300px; left:60%; transform:rotate(8deg);}
+.b7{top:-30px; left:30%; transform:rotate(-12deg);}
+.b8{top:350px; left:10%; transform:rotate(10deg);}
+.b9{top:100px; left:75%; transform:rotate(6deg);}
+.b10{top:260px; left:75%; transform:rotate(-7deg);}
+.b11{top:60px; left:-20px; transform:rotate(10deg);}
+.b12{top:330px; right:-30px; transform:rotate(-10deg);}
+.b13{top:200px; left:5%; transform:rotate(6deg);}
+.b14{top:40px; right:-40px; transform:rotate(-6deg);}
 
 .time{
 font-size:10px;
@@ -156,44 +116,44 @@ display:flex;
 align-items:center;
 gap:50px;
 flex-wrap:wrap;
+margin-top:100px;
 }
 
 .solution-text{
 flex:1;
-min-width:300px;
-}
-
-.solution-text h2{
-margin-bottom:20px;
 }
 
 .solution-steps{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:12px;
 }
 
 .solution-step{
 background:white;
-padding:18px;
-border-radius:12px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-font-size:16px;
+padding:14px 16px; /* reduced height */
+border-radius:10px;
+box-shadow:0 8px 18px rgba(0,0,0,0.05);
 }
 
-/* clean app preview */
+/* overlapping images */
 
 .solution-image{
 flex:1;
 display:flex;
 justify-content:center;
-gap:20px;
+align-items:center;
 }
 
 .solution-image img{
 width:180px;
 border-radius:20px;
 box-shadow:0 15px 30px rgba(0,0,0,0.1);
+margin-left:-40px; /* overlap */
+}
+
+.solution-image img:first-child{
+margin-left:0;
 }
 
 /* ---------- Features ---------- */
@@ -210,74 +170,6 @@ background:white;
 padding:28px;
 border-radius:14px;
 box-shadow:0 10px 25px rgba(0,0,0,0.06);
-transition:transform 0.2s ease;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-margin-top:0;
-color:#10b981;
-}
-
-/* ---------- Waitlist ---------- */
-
-.waitlist{
-text-align:center;
-margin-top:100px;
-background:white;
-padding:40px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-.waitlist p{
-color:#4b5563;
-}
-
-.gdpr{
-margin-top:4px;
-font-size:12px;
-color:#6b7280;
-}
-
-/* ---------- Footer ---------- */
-
-footer{
-margin-top:100px;
-padding-top:30px;
-border-top:1px solid #e5e7eb;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-font-size:14px;
-color:#6b7280;
-}
-
-footer a{
-margin-left:20px;
-text-decoration:none;
-color:#6b7280;
-}
-
-/* ---------- Mobile ---------- */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:32px;
-}
-
-.solution-wrap{
-flex-direction:column;
-}
-
-.chat{
-padding:20px;
-}
-
 }
 
 </style>
@@ -287,81 +179,49 @@ padding:20px;
 
 <div class="container">
 
-<header>
-<a href="/" class="brand-link">
-  <img src="Logo_LokaLinc_Transparent.png" class="logo">
-  <div class="brand">LokaLinc</div>
-</a>
-</header>
-
-<div id="home-content">
-
 <!-- HERO -->
 
 <section class="hero">
-
 <div class="hero-brand">LokaLinc</div>
 <div class="tagline">Living and Moving Together</div>
-
 <h1>Community for expats in Germany</h1>
-
-<p>
-Find housing, travel support, and real help from people who understand your situation.
-</p>
-
+<p>Find housing, travel support, and real help from people who understand your situation.</p>
 </section>
 
 <!-- PROBLEM -->
 
-<section class="section problem">
+<section class="problem">
 
 <h2>Still doing it the hard way?</h2>
 
-<div class="chat">
+<div class="chat-bg">
 
-<div class="message right m2">Anyone travelling Mumbai → Frankfurt next week?<div class="time">09:02</div></div>
-
-<div class="message right m4">Need help for my mother 🙏<div class="time">23:18</div></div>
-
-<div class="message left m1">Try Indian group on Facebook?<div class="time">08:14</div></div>
-
-<div class="message right m3">Already posted there 😞<div class="time">09:12</div></div>
-
-<div class="message right m5">Anyone Munich → Bengaluru this weekend?<div class="time">17:35</div></div>
-
-<div class="message left m2">Following<div class="time">14:03</div></div>
-
-<div class="message right m4">Please urgent 🙏<div class="time">12:30</div></div>
-
-<div class="message right m3">Can someone carry documents to India?<div class="time">10:07</div></div>
-
-<div class="message left m1">Maybe ask your friends?<div class="time">18:24</div></div>
-
-<div class="message right m5">Tried everywhere 😞<div class="time">21:57</div></div>
-
-<div class="message right m2">Anyone??<div class="time">10:05</div></div>
+<div class="bubble green b1">Mumbai → Frankfurt anyone?<div class="time">09:02</div></div>
+<div class="bubble green b2">Need help for mom 🙏<div class="time">23:18</div></div>
+<div class="bubble white b3">Try FB groups?<div class="time">08:14</div></div>
+<div class="bubble green b4">Already did 😞<div class="time">09:12</div></div>
+<div class="bubble green b5">Munich → Bengaluru anyone?<div class="time">17:35</div></div>
+<div class="bubble white b6">Following<div class="time">14:03</div></div>
+<div class="bubble green b7">Urgent pls 🙏<div class="time">12:30</div></div>
+<div class="bubble green b8">Docs to India needed<div class="time">10:07</div></div>
+<div class="bubble white b9">Ask friends?<div class="time">09:40</div></div>
+<div class="bubble green b10">Tried everything 😞<div class="time">18:24</div></div>
+<div class="bubble green b11">Anyone???<div class="time">10:05</div></div>
+<div class="bubble white b12">No idea<div class="time">21:57</div></div>
+<div class="bubble green b13">Frankfurt → Mumbai pls<div class="time">10:30</div></div>
+<div class="bubble white b14">Check WhatsApp grp<div class="time">17:11</div></div>
 
 </div>
 
-<p class="problem-summary">
-You eventually find a solution. But it takes time, effort, and sometimes a bit of luck.
-</p>
-
-<p class="problem-summary">
-It works. But it should not be this hard.
-</p>
-
-<p class="problem-highlight">
-There should be a simpler way.
-</p>
+<p>You eventually find a solution. But it takes time, effort, and sometimes a bit of luck.</p>
+<p>It works. But it should not be this hard.</p>
+<p><strong>There should be a simpler way.</strong></p>
 
 </section>
 
 <!-- SOLUTION -->
 
-<section class="section">
-
-<div class="solution-wrap">
+<section class="solution-wrap">
 
 <div class="solution-text">
 
@@ -382,78 +242,7 @@ There should be a simpler way.
 <img src="Light5.jpg">
 </div>
 
-</div>
-
 </section>
-
-<!-- FEATURES -->
-
-<section class="section">
-
-<h2 style="text-align:center;">What you can do with LokaLinc</h2>
-
-<div class="features">
-
-<div class="card">
-<h3>Temporary Housing</h3>
-<p>Find or offer short term stays when moving between cities</p>
-</div>
-
-<div class="card">
-<h3>Travel Support</h3>
-<p>Connect with people travelling similar routes</p>
-</div>
-
-<div class="card">
-<h3>Community Discussions</h3>
-<p>Ask questions and share experiences</p>
-</div>
-
-<div class="card">
-<h3>Built for Expats</h3>
-<p>Designed around real challenges people face</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- WAITLIST -->
-
-<section class="waitlist">
-
-<h2>Get early access</h2>
-
-<p>
-Be among the first to try LokaLinc.
-</p>
-
-<p>
-Leave your details and we will let you know as soon as the app is ready.
-</p>
-
-<p class="gdpr">
-You can request removal of your data at any time by contacting us.
-</p>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdR5SzuFea_y5iV_zatorZxH6Rm6RoHTKcKM335wVNL7zJxOQ/viewform?embedded=true"
-width="100%" height="900" frameborder="0">Loading…</iframe>
-
-</section>
-
-</div>
-
-<footer>
-
-<div>© 2026 LokaLinc</div>
-
-<div>
-<a href="/privacy.html">Privacy</a>
-<a href="/support.html">Support</a>
-<a href="/imprint.html">Imprint</a>
-</div>
-
-</footer>
 
 </div>
 
